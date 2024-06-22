@@ -1,0 +1,14 @@
+<div class="card bg-dark">
+    <div class="card-body">
+      <ul class="list-group" *ngIf="todos.length>0; else notodos">
+        <li class="list-group-item" *ngFor="let todo of todos">
+          {{todo.todoItem}}
+        </li>
+      </ul>
+      <ng-template #notodos>    
+        <p class="akert alert-info p-2 rounded text-center">
+            No todos Added yet!!
+        </p>
+      </ng-template>
+    </div>
+  </div>
